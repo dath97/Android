@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/id_item_schedule_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/schedule_item_label_time_color"
+        android:textSize="@dimen/schedule_item_label_time_text_size"
+        android:visibility="gone"
+        android:text="@string/item_time_no_data"/>
+    <TextView
+        android:id="@+id/id_item_schedule_label_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_left"
+        android:textColor="@color/schedule_item_label_time_color"
+        android:textSize="@dimen/schedule_item_label_time_text_size"
+        android:text="@string/item_time"/>
+
+    <TextView
+        android:id="@+id/id_item_schedule_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/schedule_item_time_color"
+        android:textSize="@dimen/schedule_item_time_text_size"
+        android:layout_toRightOf="@+id/id_item_schedule_label_time"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_item_schedule_label_room"
+        android:textSize="@dimen/schedule_item_label_time_text_size"
+        android:textColor="@color/schedule_item_label_time_color"
+        android:text="@string/item_room"
+        android:layout_marginStart="@dimen/margin_left"
+        android:layout_below="@+id/id_item_schedule_label_time"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_item_schedule_room"
+        android:textColor="@color/schedule_item_time_color"
+        android:textSize="@dimen/schedule_item_time_text_size"
+        android:layout_toRightOf="@+id/id_item_schedule_label_room"
+        android:layout_below="@+id/id_item_schedule_time"
+        android:text="B110"/>
+</RelativeLayout>

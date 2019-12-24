@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="false">
+
+    <TextView
+        android:id="@+id/id_home_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/id_home_thu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_home_title" />
+
+    <TextView
+        android:id="@+id/id_home_ngay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_home_thu" />
+
+    <TextView
+        android:id="@+id/id_home_gio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_home_ngay" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <GridLayout
+        android:id="@+id/id_gridlayout_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+
+        android:padding="@dimen/grid_layout_home_padding"
+        android:layout_margin="@dimen/grid_layout_home_margin"
+        android:rowCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <!-- 1 -->
+        <androidx.cardview.widget.CardView
+
+            android:layout_gravity="fill_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:contentPadding="@dimen/grid_layout_home_card_padding"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false">
+
+            <RelativeLayout
+                android:id="@+id/id_gridlayout_home_1"
+                android:padding="@dimen/grid_layout_home_card_relative_padding"
+                android:layout_margin="@dimen/grid_layout_home_card_relative_margin"
+                android:background="@color/backgroundGridViewHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/id_img_1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="@dimen/grid_layout_home_img_width"
+                    android:layout_height="@dimen/grid_layout_home_img_height"
+                    android:layout_margin="@dimen/grid_layout_home_img_margin"
+                    android:padding="@dimen/grid_layout_home_img_padding"
+                    android:src="@drawable/ic_open_exit_door" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/id_img_1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/grid_layout_home_text_margin_bottom"
+                    android:text="@string/name_grid_item_1"
+                    android:textColor="@color/text_grid_home"
+                    android:textSize="@dimen/grid_layout_home_text_size" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 2 -->
+        <androidx.cardview.widget.CardView
+
+            android:layout_gravity="fill_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:contentPadding="@dimen/grid_layout_home_card_padding"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false">
+
+            <RelativeLayout
+                android:id="@+id/id_gridlayout_home_2"
+                android:padding="@dimen/grid_layout_home_card_relative_padding"
+                android:layout_margin="@dimen/grid_layout_home_card_relative_margin"
+                android:background="@color/backgroundGridViewHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/id_img_2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="@dimen/grid_layout_home_img_width"
+                    android:layout_height="@dimen/grid_layout_home_img_height"
+                    android:layout_margin="@dimen/grid_layout_home_img_margin"
+                    android:padding="@dimen/grid_layout_home_img_padding"
+                    android:src="@drawable/ic_home_map_location" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/id_img_2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/grid_layout_home_text_margin_bottom"
+                    android:text="@string/name_grid_item_2"
+                    android:textColor="@color/text_grid_home"
+                    android:textSize="@dimen/grid_layout_home_text_size" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 3 -->
+        <androidx.cardview.widget.CardView
+
+            android:layout_gravity="fill_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:contentPadding="@dimen/grid_layout_home_card_padding"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false">
+
+            <RelativeLayout
+                android:id="@+id/id_gridlayout_home_3"
+                android:padding="@dimen/grid_layout_home_card_relative_padding"
+                android:layout_margin="@dimen/grid_layout_home_card_relative_margin"
+                android:background="@color/backgroundGridViewHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/id_img_3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="@dimen/grid_layout_home_img_width"
+                    android:layout_height="@dimen/grid_layout_home_img_height"
+                    android:layout_margin="@dimen/grid_layout_home_img_margin"
+                    android:padding="@dimen/grid_layout_home_img_padding"
+                    android:src="@drawable/ic_calendar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/id_img_3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/grid_layout_home_text_margin_bottom"
+                    android:text="@string/name_grid_item_3"
+                    android:textColor="@color/text_grid_home"
+                    android:textSize="@dimen/grid_layout_home_text_size" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 4 -->
+        <androidx.cardview.widget.CardView
+
+            android:layout_gravity="fill_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:contentPadding="@dimen/grid_layout_home_card_padding"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false">
+
+            <RelativeLayout
+
+                android:id="@+id/id_gridlayout_home_4"
+                android:padding="@dimen/grid_layout_home_card_relative_padding"
+                android:layout_margin="@dimen/grid_layout_home_card_relative_margin"
+                android:background="@color/backgroundGridViewHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/id_img_4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="@dimen/grid_layout_home_img_width"
+                    android:layout_height="@dimen/grid_layout_home_img_height"
+                    android:layout_margin="@dimen/grid_layout_home_img_margin"
+                    android:padding="@dimen/grid_layout_home_img_padding"
+                    android:src="@drawable/ic_history_512" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/id_img_4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/grid_layout_home_text_margin_bottom"
+                    android:text="@string/name_grid_item_4"
+                    android:textColor="@color/text_grid_home"
+                    android:textSize="@dimen/grid_layout_home_text_size" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

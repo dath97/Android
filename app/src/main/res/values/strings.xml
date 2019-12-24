@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">project</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Logout</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Images</string>
+    <string name="menu_notification">Notifications</string>
+    <string name="menu_information">Information</string>
+
+    <string name="button_login">Login</string>
+    <string name="hint_user_name_login">User Name</string>
+    <string name="hint_pass_word_login">Pass Word</string>
+    <string name="button_page_main">Login</string>
+
+    <!--  home -->
+    <string name="name_grid_item_1">Rooms</string>
+    <string name="name_grid_item_2">Maps</string>
+    <string name="name_grid_item_3">Schedule</string>
+    <string name="name_grid_item_4">History</string>
+    <!--  schedule -->
+    <string name="item_time">Thời gian: </string>
+    <string name="item_time_no_data">Không có dữ liệu </string>
+    <string name="item_room">Địa điểm: </string>
+</resources>

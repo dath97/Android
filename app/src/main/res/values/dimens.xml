@@ -1,0 +1,46 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- home -->
+    <dimen name="grid_layout_home_img_padding">10dp</dimen>
+    <dimen name="grid_layout_home_img_margin">10dp</dimen>
+    <dimen name="grid_layout_home_img_width">100dp</dimen>
+    <dimen name="grid_layout_home_img_height">100dp</dimen>
+    <dimen name="grid_layout_home_card_relative_padding">0dp</dimen>
+    <dimen name="grid_layout_home_padding">0dp</dimen>
+    <dimen name="grid_layout_home_margin">0dp</dimen>
+    <dimen name="grid_layout_home_card_relative_margin">0dp</dimen>
+    <dimen name="grid_layout_home_card_margin_top">10dp</dimen>
+    <dimen name="grid_layout_home_card_margin_left">10dp</dimen>
+    <dimen name="grid_layout_home_card_margin_bottom">10dp</dimen>
+    <dimen name="grid_layout_home_card_margin_right">10dp</dimen>
+    <dimen name="grid_layout_home_card_margin">1dp</dimen>
+    <dimen name="grid_layout_home_card_padding">10dp</dimen>
+    <dimen name="grid_layout_home_text_size">20dp</dimen>
+    <dimen name="grid_layout_home_text_margin_bottom">10dp</dimen>
+    <dimen name="home_text_size">30sp</dimen>
+    <!-- Rooms -->
+    <dimen name="room_column_width">100dp</dimen>
+    <dimen name="room_item_width">80dp</dimen>
+    <dimen name="room_item_height">60dp</dimen>
+    <dimen name="room_item_text_size">20sp</dimen>
+    <dimen name="room_content_text_size">20sp</dimen>
+    <!-- History -->
+    <dimen name="history_item_text_name_size">20sp</dimen>
+    <dimen name="history_item_text_time_size">17sp</dimen>
+    <dimen name="history_item_list_view_space">8dp</dimen>
+    <dimen name="history_list_view_bottom">10dp</dimen>
+    <dimen name="history_item_padding">10dp</dimen>
+    <!-- Schedule -->
+    <dimen name="schedule_item_time_text_size">30sp</dimen>
+    <dimen name="schedule_item_label_time_text_size">30sp</dimen>
+    <dimen name="history_item_text_time_size1">20sp</dimen>
+    <dimen name="history_item_list_view_space1">8dp</dimen>
+    <dimen name="margin_left">10dp</dimen>
+
+</resources>

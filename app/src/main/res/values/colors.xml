@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <!-- home -->
+    <color name="colorGridViewHome">#FFFFFF</color>
+    <color name="backgroundGridViewHome">#008577</color>
+    <color name="text_grid_home">#FFFFFF</color>
+    <color name="text_home">#FFFFFF</color>
+    <color name="item_room_unallow">#FF0000</color>
+    <color name="item_room_allow">#009900</color>
+    <!-- History -->
+    <color name="history_item_text_name_color">#000000</color>
+    <color name="history_item_text_time_color">#000000</color>
+    <color name="history_item_status_color_in">#008544</color>
+    <color name="history_item_status_color_out">#AA0000</color>
+    <!-- Schedule -->
+    <color name="schedule_item_time_color">#000000</color>
+    <color name="schedule_item_label_time_color">#000000</color>
+
+</resources>
