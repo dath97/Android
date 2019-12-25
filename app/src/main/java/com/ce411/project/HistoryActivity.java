@@ -49,7 +49,7 @@ import java.util.List;
 
 public class HistoryActivity extends AppCompatActivity {
 
-    private ListView listView;
+    ListView listView;
     List<HistoryClass> historyClasses;
     HistoryAdapter historyAdapter;
     Config config = new Config();

@@ -23,6 +23,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.ce411.project.model.Config;
 import com.ce411.project.model.SessionManager;
 
 import java.util.ArrayList;
@@ -103,7 +104,7 @@ public class MapsActivity extends AppCompatActivity {
     private void scanWifi() {
         arrayList.clear();
         registerReceiver(wifiReceiver, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
-        wifiManager.startScan();
+        //wifiManager.startScan();
         Toast.makeText(this, "Scanning WiFi ...", Toast.LENGTH_SHORT).show();
     }
 
@@ -113,9 +114,27 @@ public class MapsActivity extends AppCompatActivity {
             results = wifiManager.getScanResults();
             unregisterReceiver(this);
             for (ScanResult scanResult : results) {
-                //arrayList.add(scanResult.SSID + " - " + scanResult.capabilities);
-                //adapter.notifyDataSetChanged();
-                if(scanResult.SSID.equals("ABCD")){
+                if(scanResult.SSID.equals(new Config().getNameWifi1())){
+                    double level = scanResult.level;
+                    double freq = scanResult.frequency;
+                    double rs = calculateDistance(level,freq);
+                    arrayList.add(scanResult.SSID + " : " + rs);
+                    adapter.notifyDataSetChanged();
+                }else if(scanResult.SSID.equals(new Config().getNameWifi2())){
+                    double level = scanResult.level;
+                    double freq = scanResult.frequency;
+                    double rs = calculateDistance(level,freq);
+                    arrayList.add(scanResult.SSID + " : " + rs);
+                    adapter.notifyDataSetChanged();
+                }
+                else if(scanResult.SSID.equals(new Config().getNameWifi3())){
+                    double level = scanResult.level;
+                    double freq = scanResult.frequency;
+                    double rs = calculateDistance(level,freq);
+                    arrayList.add(scanResult.SSID + " : " + rs);
+                    adapter.notifyDataSetChanged();
+                }
+                else if(scanResult.SSID.equals(new Config().getNameWifi4())){
                     double level = scanResult.level;
                     double freq = scanResult.frequency;
                     double rs = calculateDistance(level,freq);
@@ -125,6 +144,7 @@ public class MapsActivity extends AppCompatActivity {
             }
         //    Toast.makeText(getApplicationContext(),results.toString(),Toast.LENGTH_LONG).show();
         }
+
     };
     public double calculateDistance(double signalLevelInDb, double freqInMHz) {
         double exp = (27.55 - (20 * Math.log10(freqInMHz)) + Math.abs(signalLevelInDb)) / 20.0;

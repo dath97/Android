@@ -148,7 +148,7 @@ public class HomeFragment extends Fragment {
         if(!isNetworkConnected()){
             getDatafromDisk();
         }else{
-            url = new Config().getUrl() + "api/lastest/" + sessionManager.getUsername();
+            url = new Config().getUrl() + "api/latest/" + sessionManager.getUsername();
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,url,null, new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) {

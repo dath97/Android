@@ -42,5 +42,10 @@
     <dimen name="history_item_text_time_size1">20sp</dimen>
     <dimen name="history_item_list_view_space1">8dp</dimen>
     <dimen name="margin_left">10dp</dimen>
-
+    <!-- Notification -->
+    <dimen name="notification_item_title_name_size">20sp</dimen>
+    <dimen name="notification_item_description_size">14sp</dimen>
+    <dimen name="notification_item_list_view_space">8dp</dimen>
+    <dimen name="notification_list_view_bottom">10dp</dimen>
+    <dimen name="notification_item_padding">10dp</dimen>
 </resources>

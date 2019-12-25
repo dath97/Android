@@ -35,9 +35,9 @@ public class FirebaseMessageService extends FirebaseMessagingService {
     private NotificationCompat.Builder notBuilder;
     private static final int MY_NOTIFICATION_ID = 12345;
     private static final int MY_REQUEST_CODE = 100;
-    Config config = new Config();
-    private String url= config.getUrl() + "api/user/token/";
-    SessionManager sessionManager = new SessionManager(this);
+//    Config config = new Config();
+//    private String url= config.getUrl() + "api/user/token/";
+//    SessionManager sessionManager = new SessionManager(this);
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
@@ -45,7 +45,7 @@ public class FirebaseMessageService extends FirebaseMessagingService {
         this.notBuilder = new NotificationCompat.Builder(this);
         this.notBuilder.setAutoCancel(true);
 
-        Log.d(TAG,"aaaaaaaaaaaaaaa");
+        Log.d(TAG,"đã nhận thông báo");
         Log.d(TAG, "From: " + remoteMessage.getFrom());
         Log.d(TAG, "Notification Message Body: " + remoteMessage.getData().get("CheckIn"));
         String ticker = "";
@@ -59,8 +59,6 @@ public class FirebaseMessageService extends FirebaseMessagingService {
         sendNotification(R.mipmap.ic_launcher,ticker,title,text);
         //Calling method to generate notification
         //sendNotification(remoteMessage.getNotification().getBody());
-
-
     }
     @Override
     public void onNewToken(String token) {
@@ -69,7 +67,7 @@ public class FirebaseMessageService extends FirebaseMessagingService {
         // If you want to send messages to this application instance or
         // manage this apps subscriptions on the server side, send the
         // Instance ID token to your app server.
-        sendRegistrationToServer(token);
+       // sendRegistrationToServer(token);
     }
     public void sendNotification(int icon,String Ticker,String title,String text)  {
         this.notBuilder.setSmallIcon(icon);
@@ -90,36 +88,36 @@ public class FirebaseMessageService extends FirebaseMessagingService {
         notificationService.notify(MY_NOTIFICATION_ID, notification);
 
     }
-    public void sendRegistrationToServer(String token){
-        final RequestQueue queue = Volley.newRequestQueue(this);
-        try{
-            JSONObject data = new JSONObject();
-            data.put("token",token);
-            url = url + sessionManager.getUsername();
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, url, data, new Response.Listener<JSONObject>() {
-                @Override
-                public void onResponse(JSONObject response) {
-                    try {
-                        String res = response.getString("status");
-                        if(res.equals("success")){
-                            Log.d("send Token","done");
-                        }else Log.d("send Token","fail");
-
-                    } catch (JSONException e){
-                        e.printStackTrace();
-                    }
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(getApplicationContext(),"error",Toast.LENGTH_SHORT).show();
-                }
-            });
-            queue.add(jsonObjectRequest);
-        }catch (JSONException e){
-            e.printStackTrace();
-        }
-    }
+//    public void sendRegistrationToServer(String token){
+//        final RequestQueue queue = Volley.newRequestQueue(this);
+//        try{
+//            JSONObject data = new JSONObject();
+//            data.put("token",token);
+//            url = url + sessionManager.getUsername();
+//            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, url, data, new Response.Listener<JSONObject>() {
+//                @Override
+//                public void onResponse(JSONObject response) {
+//                    try {
+//                        String res = response.getString("status");
+//                        if(res.equals("success")){
+//                            Log.d("send Token","done");
+//                        }else Log.d("send Token","fail");
+//
+//                    } catch (JSONException e){
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }, new Response.ErrorListener() {
+//                @Override
+//                public void onErrorResponse(VolleyError error) {
+//                    Toast.makeText(getApplicationContext(),"error",Toast.LENGTH_SHORT).show();
+//                }
+//            });
+//            queue.add(jsonObjectRequest);
+//        }catch (JSONException e){
+//            e.printStackTrace();
+//        }
+//    }
 }
 
 

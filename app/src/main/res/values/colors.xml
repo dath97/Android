@@ -20,5 +20,8 @@
     <!-- Schedule -->
     <color name="schedule_item_time_color">#000000</color>
     <color name="schedule_item_label_time_color">#000000</color>
+    <!-- Notification -->
+    <color name="notification_item_title_color">#000000</color>
+    <color name="notification_item_des_color">#000000</color>
 
 </resources>
