@@ -104,7 +104,7 @@ public class MapsActivity extends AppCompatActivity {
     private void scanWifi() {
         arrayList.clear();
         registerReceiver(wifiReceiver, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
-        //wifiManager.startScan();
+        wifiManager.startScan();
         Toast.makeText(this, "Scanning WiFi ...", Toast.LENGTH_SHORT).show();
     }
 
@@ -114,27 +114,7 @@ public class MapsActivity extends AppCompatActivity {
             results = wifiManager.getScanResults();
             unregisterReceiver(this);
             for (ScanResult scanResult : results) {
-                if(scanResult.SSID.equals(new Config().getNameWifi1())){
-                    double level = scanResult.level;
-                    double freq = scanResult.frequency;
-                    double rs = calculateDistance(level,freq);
-                    arrayList.add(scanResult.SSID + " : " + rs);
-                    adapter.notifyDataSetChanged();
-                }else if(scanResult.SSID.equals(new Config().getNameWifi2())){
-                    double level = scanResult.level;
-                    double freq = scanResult.frequency;
-                    double rs = calculateDistance(level,freq);
-                    arrayList.add(scanResult.SSID + " : " + rs);
-                    adapter.notifyDataSetChanged();
-                }
-                else if(scanResult.SSID.equals(new Config().getNameWifi3())){
-                    double level = scanResult.level;
-                    double freq = scanResult.frequency;
-                    double rs = calculateDistance(level,freq);
-                    arrayList.add(scanResult.SSID + " : " + rs);
-                    adapter.notifyDataSetChanged();
-                }
-                else if(scanResult.SSID.equals(new Config().getNameWifi4())){
+                if(scanResult.SSID.equals(new Config().getNameWifi())){
                     double level = scanResult.level;
                     double freq = scanResult.frequency;
                     double rs = calculateDistance(level,freq);

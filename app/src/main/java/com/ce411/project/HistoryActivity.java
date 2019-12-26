@@ -220,6 +220,9 @@ public class HistoryActivity extends AppCompatActivity {
                 return true;
             case R.id.action_settings:
                 sessionManager.logout();
+                Intent i = new Intent(this,LoginActivity.class);
+                startActivity(i);
+                overridePendingTransition(R.anim.left_to_right,R.anim.right_to_left);
             default:
                 Log.d("Fail","d");
                 return super.onOptionsItemSelected(item);

@@ -52,8 +52,8 @@ public class FirebaseMessageService extends FirebaseMessagingService {
         String title = "";
         String text = "";
         if(remoteMessage.getData().get("CheckIn").equals("1")){
-            title = "Check In";
-            ticker = "Check In";
+            title = "Điểm danh";
+            ticker = "Điểm danh";
             text = "Bạn đã điểm danh thành công";
         }
         sendNotification(R.mipmap.ic_launcher,ticker,title,text);
