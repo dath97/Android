@@ -1,7 +1,7 @@
 package com.ce411.project.model;
 
 public class Config {
-    private String url = "http://leductuyen.ddns.net/";
+    private String url = "http://192.168.137.1:8000/";
     private String nameWifi = "ABCD";
     private String nameWifi2 = "ABCD2";
     private String nameWifi3 = "ABCD3";
